@@ -7,13 +7,13 @@ from sklearn.preprocessing import MinMaxScaler
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 # Load training and testing data set from several CSV files
-training_data_df = pd.read_csv("trainData_perceptual_acoustic_01.csv", dtype=float)
-training_label_df = pd.read_csv("trainLabel_perceptual_acoustic_01.csv", dtype=float)
+training_data_df = pd.read_csv("trainData.csv", dtype=float)
+training_label_df = pd.read_csv("trainLabel.csv", dtype=float)
 X_training = training_data_df.values
 Y_training = training_label_df.values
 
-test_data_df = pd.read_csv("testData_perceptual_acoustic_01.csv", dtype=float)
-test_label_df = pd.read_csv("testLabel_perceptual_acoustic_01.csv", dtype=float)
+test_data_df = pd.read_csv("testData.csv", dtype=float)
+test_label_df = pd.read_csv("testLabel.csv", dtype=float)
 X_testing = test_data_df.values
 Y_testing = test_label_df.values
 
