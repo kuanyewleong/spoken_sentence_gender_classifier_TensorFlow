@@ -121,8 +121,8 @@ with tf.Session() as session:
     # Unscale the data back to it's original value
     Y_predicted = Y_scaler.inverse_transform(Y_predicted_scaled)
 
-    real_earnings = test_label_df.values[0]
-    predicted_earnings = Y_predicted[0][0]
+    real_class = test_label_df.values[0]
+    predicted_class = Y_predicted[0][0]
 
-    print("The actual class #1 is ${}".format(real_earnings))
-    print("Our neural network predicted class is ${}".format(predicted_earnings))
+    print("The actual class #1 is ${}".format(real_class))
+    print("Our neural network predicted class is ${}".format(predicted_class))
