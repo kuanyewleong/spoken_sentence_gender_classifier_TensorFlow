@@ -29,9 +29,9 @@ X_scaled_testing = X_scaler.transform(X_testing)
 Y_scaled_testing = Y_scaler.transform(Y_testing)
 
 # Define some parameters for the new model
-RUN_NAME = "run 1 with 50 nodes"
+RUN_NAME = "run x"
 learning_rate = 0.001
-training_epochs = 1000
+training_epochs = 5000
 
 # Define dimensions of the input and output
 number_of_inputs = 56
