@@ -17,7 +17,7 @@ test_label_df = pd.read_csv("testLabel.csv", dtype=float)
 X_testing = test_data_df.values
 Y_testing = test_label_df.values
 
-# Normalize the dat to 0 and 1
+# Normalize the data to 0 and 1
 X_scaler = MinMaxScaler(feature_range=(0, 1))
 Y_scaler = MinMaxScaler(feature_range=(0, 1))
 
