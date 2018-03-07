@@ -49,13 +49,13 @@ with tf.variable_scope('input'):
 with tf.variable_scope('layer_1'):
     weights = tf.get_variable("weights1", shape=[number_of_inputs, layer_1_nodes], initializer=tf.contrib.layers.xavier_initializer())
     biases = tf.get_variable(name="biases1", shape=[layer_1_nodes], initializer=tf.zeros_initializer())
-    layer_1_output = tf.nn.relu(tf.matmul(X, weights) + biases)
+    layer_1_output = tf.nn.leaky_relu(tf.matmul(X, weights) + biases)
 
 # Layer 2
 with tf.variable_scope('layer_2'):
     weights = tf.get_variable("weights2", shape=[layer_1_nodes, layer_2_nodes], initializer=tf.contrib.layers.xavier_initializer())
     biases = tf.get_variable(name="biases2", shape=[layer_2_nodes], initializer=tf.zeros_initializer())
-    layer_2_output = tf.nn.relu(tf.matmul(layer_1_output, weights) + biases)
+    layer_2_output = tf.nn.leaky_relu(tf.matmul(layer_1_output, weights) + biases)
 
 # Output Layer
 with tf.variable_scope('output'):
