@@ -126,5 +126,3 @@ with tf.Session() as session:
 
     print("The actual class #1 is ${}".format(real_class))
     print("Our neural network predicted class is ${}".format(predicted_class))
-
-    # testing git
